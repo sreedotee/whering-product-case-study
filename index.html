@@ -677,33 +677,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">02 / Redesign Showcase</p>
-        <h2>Screens in Motion</h2>
-        <p>Whering is at its best when the wardrobe feels alive: items becoming outfits, outfits becoming plans, and saved pieces turning into a clearer sense of personal style.</p>
-        <div class="motion-frame">
-          <div class="motion-strip">
-            <div class="phone-card">
-              <div class="screen"></div>
-              <span>Discover</span>
-            </div>
-            <div class="phone-card">
-              <div class="screen"></div>
-              <span>Style</span>
-            </div>
-            <div class="phone-card">
-              <div class="screen"></div>
-              <span>Planner</span>
-            </div>
-            <div class="phone-card">
-              <div class="screen"></div>
-              <span>Profile</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <p class="section-kicker">03 / Where Whering works best</p>
+        <p class="section-kicker">02 / Where Whering works best</p>
         <h2>Why Whering Works</h2>
         <p>Whering works because it gives a familiar feeling a product shape. Most people know the frustration of looking at a full wardrobe and still feeling like there is nothing to wear. Whering turns that moment into a system: upload what you own, create looks, plan them, and slowly understand your wardrobe better.</p>
         <p>The product is also emotionally smart. It makes sustainability feel less like a lecture and more like a creative act. Rewearing becomes styling. Tracking becomes self-knowledge. Planning becomes a small way to reduce daily stress.</p>
@@ -711,7 +685,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">04 / Screen observations</p>
+        <p class="section-kicker">03 / Screen observations</p>
         <h2>Screen-Level Observations</h2>
         <p>This carousel looks at screens where the product is visually strong, while also showing moments where the structure asks for extra interpretation from the user.</p>
 
@@ -759,7 +733,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">05 / Broken flows and disconnected loops</p>
+        <p class="section-kicker">04 / Broken flows and disconnected loops</p>
         <h2>Where the Flows Start to Break</h2>
         <p>The main structural issue is not one screen. It is the way many parts of the app ask users to move through duplicated steps, repeated icons, and redundant decisions all at once.</p>
         <p>Instead of one clear path, the user sees multiple surfaces that partially overlap: Canvas and Dress Me, Plan and Planner, Wardrobe and Wishlist and Moodboard and Lookbook. Each one makes sense locally, but together they create product debt.</p>
@@ -783,7 +757,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">06 / Design inspiration</p>
+        <p class="section-kicker">05 / Design inspiration</p>
         <h2>Pinterest, Childhood Dress-Up Games, and Cosmos</h2>
         <p>The redesign direction comes from references that make visual browsing, styling, and collecting feel simple without over-explaining the system.</p>
         <div class="reference-board">
@@ -810,7 +784,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">07 / Concept consolidation</p>
+        <p class="section-kicker">06 / Concept consolidation</p>
         <h2>Reducing Mental Load and Product Debt</h2>
         <p>The redesign consolidates overlapping concepts so users can build a simpler mental model of the app. The goal is not to remove richness. The goal is to reduce the number of decisions the user has to make before getting value.</p>
         <div class="concept-diagram">
@@ -836,7 +810,7 @@
       </section>
 
       <section>
-        <p class="section-kicker">08 / Navigation</p>
+        <p class="section-kicker">07 / Navigation</p>
         <h2>The Navigation I Would Move Toward</h2>
         <p>The proposed navigation separates passive discovery, active search, creation, planning, and personal ownership. It gives each major user intent one clear home.</p>
         <div class="nav-grid" aria-label="Proposed bottom navigation">
@@ -848,6 +822,45 @@
         </div>
         <div class="note">
           <strong>Navigation principle:</strong> casual loops stay immediately accessible, while deeper planning and wardrobe intelligence can sit one level below.
+        </div>
+      </section>
+
+      <section>
+        <p class="section-kicker">08 / New screens</p>
+        <h2>Redesigned Screens</h2>
+        <p>Whering is at its best when the wardrobe feels alive: items becoming outfits, outfits becoming plans, and saved pieces turning into a clearer sense of personal style.</p>
+        <p>These screens are from a <a href="#" aria-label="Mid-fidelity prototype link placeholder">mid-fidelity prototype</a> I made during the redesign process to test the proposed navigation model, task flows, and taps-to-complete for key journeys. The visual design is intentionally temporary; the focus here is on structure, flow, and whether the core actions become easier to reach.</p>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel-frame">
+            <div class="carousel-track">
+              <article class="slide">
+                <div class="slide-grid">
+                  <img class="frame-image" src="images/whering/redesign-1.png" alt="Mid-fidelity redesigned Discover feed screen">
+                </div>
+              </article>
+              <article class="slide">
+                <div class="slide-grid">
+                  <img class="frame-image" src="images/whering/redesign-2.png" alt="Mid-fidelity redesigned outfit detail screen">
+                </div>
+              </article>
+              <article class="slide">
+                <div class="slide-grid">
+                  <img class="frame-image" src="images/whering/redesign-3.png" alt="Mid-fidelity redesigned styling screen">
+                </div>
+              </article>
+              <article class="slide">
+                <div class="slide-grid">
+                  <img class="frame-image" src="images/whering/redesign-4.png" alt="Mid-fidelity redesigned planner and event flow screen">
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous redesigned screen">&lt;</button>
+            <span class="carousel-status" data-carousel-status>1 / 4</span>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next redesigned screen">&gt;</button>
+          </div>
         </div>
       </section>
 
@@ -900,8 +913,8 @@
   </main>
 
   <script>
-    const carousel = document.querySelector("[data-carousel]");
-    if (carousel) {
+    const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
+    carousels.forEach((carousel) => {
       const track = carousel.querySelector(".carousel-track");
       const slides = Array.from(carousel.querySelectorAll(".slide"));
       const prev = carousel.querySelector("[data-carousel-prev]");
@@ -925,7 +938,7 @@
       });
 
       renderCarousel();
-    }
+    });
 
     const flowButtons = Array.from(document.querySelectorAll("[data-flow-toggle]"));
     const flowImage = document.querySelector("[data-flow-image]");
